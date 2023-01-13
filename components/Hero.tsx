@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
-import HeroImage from "../asset/heroImage.png";
+import HeroImage from "../asset/heroImage.jpg";
 import Link from "next/link";
 
 type Props = {};
@@ -23,12 +23,7 @@ export default function Hero({}: Props) {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      {/* <img src="https://drive.google.com/file/d/16r6hFzLgxuPOo6BVjVU5C7NPMom_4LOt/view?usp=share_link" /> */}
-      <Image
-        className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src={HeroImage}
-        alt={""}
-      />
+      <Image className="rounded-full h-32 w-32" src={HeroImage} alt={""} />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 tracking-[15px]">
           Software Engineer
