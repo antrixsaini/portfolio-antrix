@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import ExperienceImage from "../asset/experienceLangara.jpeg";
-import TechImage1 from "../asset/javascript.png";
 import { motion } from "framer-motion";
 import { Experience } from "../typings";
 import { urlFor } from "../sanity";
@@ -27,8 +25,10 @@ export default function ExperienceCard({ experience }: Props) {
         />
       </motion.div>
       <div className="px-0 md:px-10 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]/80">
-        <h4 className="text-4xl font-light">Vivid Theory</h4>
-        <p className="uppercase font-bold text-2xl mt-1">Software Developer</p>
+        <h4 className="text-4xl font-light">{experience.company}</h4>
+        <p className="uppercase font-bold text-2xl mt-1">
+          {experience.jobTitle}
+        </p>
         <div className="flex space-x-2 my-2">
           {/* tech used */}
           {experience.technologies.map((tech) => (

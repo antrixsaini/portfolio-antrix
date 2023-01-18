@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import SkillImage1 from "../asset/javascript.png";
 import { urlFor } from "../sanity";
 import { Skill } from "../typings";
 

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import React from "react";
 import { Skill } from "../typings";
 import SkillCard from "./SkillCard";
@@ -19,10 +18,10 @@ export default function Skills({ skills }: Props) {
       </h3>
       <div className="md:mt-20 relative grid grid-cols-4 gap-5">
         {skills?.slice(0, skills.length / 2).map((skill) => (
-          <SkillCard skill={skill} />
+          <SkillCard key={skill._id} skill={skill} />
         ))}
         {skills?.slice(skills.length / 2, skills.length).map((skill) => (
-          <SkillCard skill={skill} directionLeft />
+          <SkillCard key={skill._id} skill={skill} directionLeft />
         ))}
       </div>
     </div>

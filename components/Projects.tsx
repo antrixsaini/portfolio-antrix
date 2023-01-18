@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import AmazonCloneImage from "../asset/AmazonCloneImage.png";
 import { urlFor } from "../sanity";
 import { Project } from "../typings";
 
@@ -46,13 +46,20 @@ function Projects({ projects }: Props) {
               </h4>
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies.map((technology) => (
-                  <img
+                  <Image
                     className="h-10 w-10"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
+                    width={10}
+                    height={10}
                     alt=""
                   />
                 ))}
+                <Link href={project.linkToBuild}>
+                  <p className="text-[#F7AB0A]/50 text-md p-4">
+                    Click for Details
+                  </p>
+                </Link>
               </div>
               <p className="text-lg text-center md:text-left">
                 {project.summary}
