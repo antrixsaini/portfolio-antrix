@@ -2,10 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import AboutImage from "../asset/aboutImage.png";
 import Image from "next/image";
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = { pageInfo: PageInfo };
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -27,8 +29,10 @@ function About({}: Props) {
       >
         <Image
           className="rounded-full object-cover md:rounded-lg"
-          src={AboutImage}
+          src={urlFor(pageInfo?.profilePic).url()}
           alt={""}
+          width={500}
+          height={500}
         />
       </motion.div>
       <div className="space-y-10 px-0 md:px-10">
@@ -37,13 +41,7 @@ function About({}: Props) {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p>
-          A full-stack developer with knowledge and skills accumulated by
-          working on projects in a collaborative environment. Continually
-          pushing to learn advanced technology through self-education and
-          striving for innovation by acquiring and sharpening problem-solving
-          skills.
-        </p>
+        <p>{pageInfo.backgroundInformation}</p>
       </div>
     </motion.div>
   );
