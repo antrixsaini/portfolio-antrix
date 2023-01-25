@@ -9,14 +9,13 @@ import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import Link from "next/link";
 import Image from "next/image";
-import HeroImage from "../asset/heroImage.jpg";
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchSocials } from "../utils/fetchSocials";
 import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchSkills } from "../utils/fetchSkills";
-import { useEffect } from "react";
+import { urlFor } from "../sanity";
 
 type Props = {
   pageInfo: PageInfo;
@@ -63,7 +62,9 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
           <div className="flex items-center justify-center">
             <Image
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0"
-              src={HeroImage}
+              src={urlFor(pageInfo?.heroImage).url()}
+              width={100}
+              height={100}
               alt=""
             />
           </div>

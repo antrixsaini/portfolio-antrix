@@ -19,11 +19,11 @@ const ContactMe = ({ pageInfo }: Props) => {
   };
 
   return (
-    <div className="h-screen flex flex-col text-center md:text-left max-w-7xl px-10  items-center mx-auto ">
+    <div className="h-screen flex flex-col text-center md:text-left max-w-7xl px-4 items-center">
       <h3 className="pt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="h-full pt-8 flex flex-col space-y-10 justify-center">
+      <div className="h-full pt-8 flex flex-col space-y-10 justify-center w-full overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         <h4 className="text-3xl xl:text-4xl font-semibold text-center">
           I have got just what you need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk</span>
@@ -42,44 +42,44 @@ const ContactMe = ({ pageInfo }: Props) => {
             <p className="text-xl xl:text-2xl">{pageInfo.address}</p>
           </div>
         </div>
-        <div className="mx-6">
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-2 w-fit mx-auto"
-          >
-            <div className=" flex space-x-2">
-              <input
-                {...register("name")}
-                placeholder="Name"
-                className="contactInput"
-                type="text"
-              />
-              <input
-                {...register("email")}
-                placeholder="Email"
-                className="contactInput"
-                type="email"
-              />
-            </div>
+
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col space-y-2 w-fit mx-auto "
+        >
+          <div className="flex space-x-2 ">
             <input
-              {...register("subject")}
-              placeholder="Subject"
+              {...register("name")}
+              placeholder="Name"
               className="contactInput"
               type="text"
             />
-            <textarea
-              {...register("message")}
-              placeholder="Message"
+            <input
+              {...register("email")}
+              placeholder="Email"
               className="contactInput"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+              type="email"
+            />
+          </div>
+          <input
+            {...register("subject")}
+            placeholder="Subject"
+            className="contactInput"
+            type="text"
+          />
+          <textarea
+            {...register("message")}
+            placeholder="Message"
+            className="contactInput"
+            rows={4}
+          />
+          <button
+            type="submit"
+            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold"
+          >
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   );

@@ -52,8 +52,8 @@ function Projects({ projects }: Props) {
                     className="h-10 w-10"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
-                    width={10}
-                    height={10}
+                    width={200}
+                    height={200}
                     alt=""
                   />
                 ))}
@@ -63,7 +63,7 @@ function Projects({ projects }: Props) {
                   </p>
                 </Link>
               </div>
-              <p className="text-lg text-center md:text-left pb-4 px-4">
+              <p className="text-md text-center md:text-left pb-4 px-4">
                 {project.summary}
               </p>
             </div>
