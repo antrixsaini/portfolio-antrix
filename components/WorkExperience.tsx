@@ -11,13 +11,13 @@ function WorkExperience({ experiences }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen flex overflow-hidden flex-col text-lft max-w-full px-10 justify-evenly mx-auto items-center"
+      className="h-screen flex overflow-hidden flex-col text-lft max-w-full px-10 mx-auto items-center"
     >
-      <h3 className="mt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="pt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Experience
       </h3>
       {/* Experience Cards */}
-      <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
+      <div className="h-screen w-full flex space-x-5 overflow-x-scroll p-2 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
         {experiences.map((experience) => {
           return (
             <ExperienceCard key={experience._id} experience={experience} />
