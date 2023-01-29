@@ -16,7 +16,7 @@ function Projects({ projects }: Props) {
       <h3 className="pt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div className="h-4/5 w-full flex space-x-5 overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 pt-6 sm:pt-0">
+      <div className="h-4/5 w-full flex space-x-5 overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin  scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 pt-6 sm:pt-0">
         {projects?.map((project, i) => (
           <ProjectCard
             key={project._id}

@@ -17,7 +17,7 @@ function About({ pageInfo }: Props) {
       <h3 className="pt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
-      <div className="pt-10 flex flex-col md:text-left md:flex-row justify-evenly items-center h-3/4">
+      <div className="md:pt-10 flex flex-col md:text-left md:flex-row justify-center md:justify-evenly items-center h-4/5">
         <motion.div
           initial={{ x: -200, opacity: 0 }}
           transition={{ duration: 1.5 }}
@@ -34,7 +34,7 @@ function About({ pageInfo }: Props) {
             height={500}
           />
         </motion.div>
-        <div className="space-y-10 px-0 md:px-10">
+        <div className="pt-4 space-y-6 md:space-y-10 px-0 md:px-10">
           <h4 className="text-4xl font-semibold">
             Here is a{" "}
             <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}

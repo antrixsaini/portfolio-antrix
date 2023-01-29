@@ -22,7 +22,8 @@ const ProjectCard = ({ project, totalProjects, index }: Props) => {
       >
         <Image
           className="
-                w-[420px] h-[280px] 
+                w-[375px] h-[250px]
+                sm:w-[420px] sm:h-[280px] 
                 md:w-[480px] md:h-[320px] lg:w-[525px] lg:h-[350px] xl:w-[600px] xl:h-[400px]"
           src={urlFor(project?.image).url()}
           width={1000}
@@ -30,14 +31,14 @@ const ProjectCard = ({ project, totalProjects, index }: Props) => {
           alt={""}
         />
       </motion.div>
-      <div className="space-y-6 px-2 md:px-10 max-w-6xl">
+      <div className="space-y-6 px-2 md:px-10 max-w-6xl overflow-y-scroll overflow-hidden scrollbar-thin ">
         <h4 className="text-3xl font-semibold text-center">
           <span className="underline decoration-[#F7AB0A]/50">
             Case Study {index + 1} of {totalProjects}:
           </span>{" "}
           {project?.title}
         </h4>
-        <div className="flex items-center space-x-2 justify-center">
+        <div className="flex items-center space-x-2 justify-center ">
           {project?.technologies.map((technology) => (
             <Image
               className="h-10 w-10"
@@ -52,6 +53,7 @@ const ProjectCard = ({ project, totalProjects, index }: Props) => {
             <p className="text-[#F7AB0A]/50 text-md p-2">Click for Details</p>
           </Link>
         </div>
+
         <p className="text-md text-center md:text-left pb-4">
           {project.summary}
         </p>

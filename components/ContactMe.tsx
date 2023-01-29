@@ -22,12 +22,12 @@ const ContactMe = ({ pageInfo }: Props) => {
       <h3 className="pt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="h-full pt-8 flex flex-col space-y-10 justify-start md:justify-center w-full overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="h-4/5 pt-8 flex flex-col space-y-4 md:space-y-8 justify-start md:justify-center w-full overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         <h4 className="text-3xl xl:text-4xl font-semibold text-center">
           I have got just what you need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk</span>
         </h4>
-        <div className="space-y-6">
+        <div className="space-y-4 md:space-y-6">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-xl xl:text-2xl">{pageInfo.phoneNumber}</p>
@@ -70,7 +70,7 @@ const ContactMe = ({ pageInfo }: Props) => {
             {...register("message")}
             placeholder="Message"
             className="contactInput"
-            rows={4}
+            rows={3}
           />
           <button
             type="submit"
