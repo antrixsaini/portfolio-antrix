@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import React, { useRef } from "react";
 import { Skill } from "../typings";
 import SkillCard from "./SkillCard";
@@ -21,7 +21,7 @@ export default function Skills({ skills }: Props) {
           Hover over a skill for current proficiency
         </h3>
       </div>
-      <div className="h-full flex flex-col justify-center">
+      <div className="h-full flex flex-col justify-start md:justify-center">
         <div ref={ref} className="py-10 px-2 grid grid-cols-4 gap-3">
           {skills?.slice(0, skills.length / 2).map((skill) => (
             <SkillCard key={skill._id} skill={skill} isInView={isInView} />

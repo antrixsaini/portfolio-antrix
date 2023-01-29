@@ -15,7 +15,7 @@ export default function Hero({ pageInfo }: Props) {
     words: [
       `Hi, The Name's ${pageInfo?.name}`,
       "Guy-who-loves-travel-with-coffee.tsx",
-      "<ButLovesToCode=>More />",
+      " <ButLovesToCodeMore />",
     ],
     loop: true,
     delaySpeed: 2000,

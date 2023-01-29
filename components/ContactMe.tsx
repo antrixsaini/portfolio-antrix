@@ -14,16 +14,15 @@ type Props = { pageInfo: PageInfo };
 
 const ContactMe = ({ pageInfo }: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:sainiantrix@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
-  };
+  const onSubmit: SubmitHandler<Inputs> = (formData) =>
+    (window.location.href = `mailto:sainiantrix@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`);
 
   return (
     <div className="h-screen flex flex-col text-center md:text-left max-w-7xl px-4 items-center">
       <h3 className="pt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="h-full pt-8 flex flex-col space-y-10 justify-center w-full overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="h-full pt-8 flex flex-col space-y-10 justify-start md:justify-center w-full overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         <h4 className="text-3xl xl:text-4xl font-semibold text-center">
           I have got just what you need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk</span>
