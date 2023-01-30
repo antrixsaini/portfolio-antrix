@@ -54,7 +54,7 @@ const ProjectCard = ({ project, totalProjects, index }: Props) => {
           </Link>
         </div>
 
-        <p className="text-md text-center md:text-left pb-4">
+        <p className="text-md lg:text-lg xl:text-xl text-center md:text-left pb-4">
           {project.summary}
         </p>
       </div>

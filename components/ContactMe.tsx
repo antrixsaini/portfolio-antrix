@@ -18,7 +18,7 @@ const ContactMe = ({ pageInfo }: Props) => {
     (window.location.href = `mailto:sainiantrix@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`);
 
   return (
-    <div className="h-screen flex flex-col text-center md:text-left max-w-7xl px-4 items-center">
+    <div className="h-screen text-center max-w-7xl px-4 mx-auto">
       <h3 className="pt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>

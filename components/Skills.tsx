@@ -9,7 +9,7 @@ export default function Skills({ skills }: Props) {
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
-    <div className="h-screen flex flex-col overflow-hidden text-center max-w-[2000px] xl:px-10 min-h-screen xl:space-y-0 items-center">
+    <div className="mx-auto h-screen flex flex-col overflow-hidden text-center max-w-[2000px] xl:px-10 min-h-screen xl:space-y-0 items-center">
       <div className="pt-20">
         <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl">
           Skills
