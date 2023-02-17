@@ -1,6 +1,3 @@
-// type tfc
-// React Social Icons
-
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
@@ -28,7 +25,7 @@ export default function Header({ socials }: Props) {
         }}
         className="flex flex-row items-center"
       >
-        {/** Social Icons */}
+        {/* Social Icons */}
         {socials.map((social) => {
           return (
             <SocialIcon

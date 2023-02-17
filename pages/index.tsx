@@ -75,7 +75,14 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 };
 export default Home;
 
+{
+  /* posts will be populated at build time by getStaticProps()
+    This function gets called at build time on server-side.
+  */
+}
+
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  // Call an external API endpoint to get data from CMS sanity.io
   const pageInfo: PageInfo = await fetchPageInfo();
   const socials: Social[] = await fetchSocials();
   const projects: Project[] = await fetchProjects();
@@ -90,12 +97,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       socials,
     },
-    /**
+    /** 
       Next.js will attempt to re -generate the page:
-      when a request comes in
-      at most once every 10 seconds
+      when a request comes in at most once every 10 seconds
       for faster experience
-  */
+    */
     revalidate: 10,
   };
 };

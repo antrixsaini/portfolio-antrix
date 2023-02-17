@@ -53,7 +53,6 @@ const ProjectCard = ({ project, totalProjects, index }: Props) => {
             <p className="text-[#F7AB0A]/50 text-md p-2">Click for Details</p>
           </Link>
         </div>
-
         <p className="text-md lg:text-lg xl:text-xl text-center md:text-left pb-4">
           {project.summary}
         </p>
