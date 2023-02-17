@@ -16,7 +16,6 @@ function WorkExperience({ experiences }: Props) {
       <h3 className="pt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Experience
       </h3>
-      {/* Experience Cards */}
       <div className="h-4/5 w-full flex space-x-5 overflow-x-scroll p-2 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
         {experiences.map((experience) => {
           return (

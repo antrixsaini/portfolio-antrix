@@ -1,5 +1,3 @@
-// react-simple-typewriter library
-
 import Image from "next/image";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";

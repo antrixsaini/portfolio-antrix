@@ -29,7 +29,7 @@ export default function ExperienceCard({ experience }: Props) {
           {experience.jobTitle}
         </p>
         <div className="flex space-x-2 mt-2">
-          {/* tech used */}
+          {/* Technical skills used */}
           {experience.technologies.map((tech) => (
             <Image
               key={tech._id}

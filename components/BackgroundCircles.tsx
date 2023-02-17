@@ -1,3 +1,6 @@
+{
+  /*Backgrond Animation on Hero landing page section using Framer Motion*/
+}
 import { motion } from "framer-motion";
 import React from "react";
 
